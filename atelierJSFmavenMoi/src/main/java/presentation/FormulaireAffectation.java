@@ -15,14 +15,14 @@ public class FormulaireAffectation {
 
 	private Eleve eleve;
 	private Atelier atelier;
-	
+
 	private AtelierService service;
-	
+
 	public FormulaireAffectation() {
 		service = AtelierServiceImpl.getInstance();
 	}
 
-	public String affecterEleve(){
+	public String affecterEleve() {
 		try {
 			service.inscrireEleve(eleve, atelier);
 		} catch (AtelierException e) {
@@ -30,7 +30,7 @@ public class FormulaireAffectation {
 		}
 		return "affecter";
 	}
-	
+
 	public Eleve getEleve() {
 		return eleve;
 	}

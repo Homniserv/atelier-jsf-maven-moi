@@ -10,16 +10,16 @@ public class Menu {
 	public Menu() {
 	}
 
-	public String eleve(){
+	public String eleve() {
 		return "eleve";
 	}
-	
-	public String atelier(){
+
+	public String atelier() {
 		return "eleve";
 	}
-	
-	public String affecter(){
+
+	public String affecter() {
 		return "eleve";
 	}
-	
+
 }
