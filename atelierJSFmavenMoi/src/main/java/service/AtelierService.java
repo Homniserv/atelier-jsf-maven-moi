@@ -13,4 +13,6 @@ public interface AtelierService {
 
 	public Object getLstEleves();
 
+	public Object getLstAteliers();
+
 }

@@ -22,9 +22,10 @@ public class FormulaireAffectation {
 		service = AtelierServiceImpl.getInstance();
 	}
 
-	public String affecterEleve() {
+	public String affecterEleve() throws AtelierException{
 		try {
-			service.inscrireEleve(eleve, atelier);
+			//service.inscrireEleve(eleve, atelier);
+			throw new AtelierException();
 		} catch (AtelierException e) {
 			e.printStackTrace();
 		}
