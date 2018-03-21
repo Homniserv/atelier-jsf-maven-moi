@@ -1,5 +1,8 @@
 package service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import entite.Atelier;
 import entite.Eleve;
 import exception.AtelierException;
@@ -25,24 +28,23 @@ public class AtelierServiceImpl implements AtelierService {
 		}
 	}
 
-	public void ajouterEleve(Eleve eleve) {
-		// TODO Auto-generated method stub
+	Eleve[] eleveCollection = {};
+	List<Atelier> atelierCollection = new ArrayList<Atelier>();
 
+	public void ajouterEleve(Eleve eleve) {
+		this.eleveCollection[this.eleveCollection.length] = eleve;
 	}
 
 	public void ajouterAtelier(Atelier atelier) {
-		// TODO Auto-generated method stub
-
+		this.atelierCollection.add(atelier);
 	}
 
 	// TODO Iterable
-	public Object getLstEleves() {
-		// TODO Auto-generated method stub
-		return null;
+	public Eleve[] getLstEleves() {
+		return this.eleveCollection;
 	}
 
-	public Object getLstAteliers() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Atelier> getLstAteliers() {
+		return this.atelierCollection;
 	}
 }

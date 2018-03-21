@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Accueil</title>
+</h:head>
+<h:body>
+
+	<div id="title" align="center">
+		<h1>Accueil</h1>
+	</div>
+	<hr />
+	<hr />
+
+	<div id="menu" align="center">
+		<h:form name="formulaire" method="POST">
+			<ul>
+				<li><h:commandButton value="Saisir un élève" action="eleve" /></li>
+				<li><h:commandButton value="Saisir un atelier" action="atelier" /></li>
+				<li><h:commandButton value="Affecter un élève à un atelier" action="affecter" /></li>
+			</ul>
+		</h:form>
+	</div>
+
+</h:body>
+</html>

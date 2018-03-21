@@ -31,6 +31,7 @@ public class EleveConverter implements Converter {
 		throw new ConverterException(new FacesMessage(String.format("Cannot convert %s to Eleve", value)));
 	}
 
+	/**tri bi condition*/
 	@Override
 	public String getAsString(FacesContext arg0, UIComponent arg1, Object value) {
 		return (value instanceof Eleve) ? ((Eleve) value).getNom() : null;

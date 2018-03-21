@@ -30,6 +30,7 @@ public class AtelierConverter implements Converter {
 		throw new ConverterException(new FacesMessage(String.format("Cannot convert %s to Eleve", value)));
 	}
 
+	/**2 ways if*/
 	public String getAsString(FacesContext arg0, UIComponent arg1, Object value) {
 		return (value instanceof Atelier) ? ((Atelier) value).getNom() : null;
 	}

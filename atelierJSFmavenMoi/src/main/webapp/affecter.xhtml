@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Inscription à un atelier</title>
+</h:head>
+<h:body>
+
+	<div id="title" align="center">
+		<h1>Inscription à un atelier</h1>
+	</div>
+	<hr />
+	<hr />
+
+	<div id="title" align="center">
+		<h:form name="formulaireAffectation" method="POST">
+
+			Atelier : 
+			<h:selectOneMenu value="#{formulaireAffectation.atelier}">
+				<f:converter converterId="atelierConverter" />
+	   			<f:selectItems value="#{formulaireAffectation.service.lstAteliers}" var="atelier"
+                    itemValue="#{atelier}" itemLabel="#{atelier.nom}" />
+	   		</h:selectOneMenu>
+			<br></br>
+			Elève : 
+			<h:selectOneMenu value="#{formulaireAffectation.eleve}">
+				<f:converter converterId="eleveConverter" />
+	   			<f:selectItems value="#{formulaireAffectation.service.lstEleves}" var="eleve"
+                    itemValue="#{eleve}" itemLabel="#{eleve.prenom} #{eleve.nom}" />
+	   		</h:selectOneMenu>
+			<br></br>
+			<fieldset>
+				<h:commandButton value="Envoyer" action="#{formulaireAffectation.affecterEleve}" />
+			</fieldset>
+
+		</h:form>
+
+		<h:form name="formulaire" method="POST">
+			<h:commandButton value="Retour au menu" action="menu" />
+		</h:form>
+
+		<h1>Liste des ateliers :</h1>
+		<h:dataTable value="#{formulaireAffectation.service.lstAteliers}" var="atelier">
+			<h:column>
+				Eleves inscrits pour l'atelier #{atelier.nom} : 
+				<h:dataTable value="#{atelier.lstEleves}" var="eleve">
+					<h:column>
+						 - #{eleve.prenom} #{eleve.nom}
+					</h:column>
+				</h:dataTable>
+			</h:column>
+		</h:dataTable>
+
+	</div>
+
+</h:body>
+</html>
