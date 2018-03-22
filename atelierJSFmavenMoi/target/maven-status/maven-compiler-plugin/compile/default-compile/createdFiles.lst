@@ -1,1 +1,12 @@
+service\AtelierService.class
+exception\AtelierException.class
 entite\Eleve.class
+presentation\PoubConverter.class
+service\AtelierServiceImpl.class
+entite\Atelier.class
+presentation\AtelierConverter.class
+presentation\EleveConverter.class
+presentation\FormulaireAtelier.class
+presentation\FormulaireAffectation.class
+presentation\Menu.class
+presentation\FormulaireEleve.class

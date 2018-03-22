@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Créer un atelier</title>
+</h:head>
+<h:body>
+
+	<div id="title" align="center">
+		<h1>Créer un atelier</h1>
+	</div>
+	<hr />
+	<hr />
+
+	<div id="title" align="center">
+		<h:form name="formulaireEleve" method="POST">
+
+			Nom : <h:inputText value="#{formulaireAtelier.nom}"></h:inputText>
+			<br></br>
+			Nombres d'élèves max : <h:inputText value="#{formulaireAtelier.nbMax}"></h:inputText>
+			<br></br>
+			Age max des élèves : <h:inputText value="#{formulaireAtelier.ageMax}"></h:inputText>
+			<br></br>
+			<fieldset>
+				<h:commandButton value="Envoyer" action="#{formulaireAtelier.creerAtelier}" />
+			</fieldset>
+
+		</h:form>
+		
+		<h:form name="formulaire" method="POST">
+			<h:commandButton value="Retour au menu" action="menu" />
+		</h:form>
+		
+		<h1>Liste des ateliers :</h1>
+		<h:dataTable value="#{formulaireAtelier.service.lstAteliers}" var="atelier">
+			<h:column>
+				L'atelier #{atelier.nom} pour un maximum de #{atelier.nbMax} élèves ayant
+				 au plus #{atelier.ageMax} ans à la date du #{atelier.date}
+			</h:column>
+		</h:dataTable>
+
+	</div>
+
+</h:body>
+</html>
