@@ -28,11 +28,14 @@ public class AtelierServiceImpl implements AtelierService {
 		}
 	}
 
-	Eleve[] eleveCollection = {};
+	// Eleve[] eleveCollection = {};
+	List<Eleve> eleveCollection = new ArrayList<Eleve>();
+
 	List<Atelier> atelierCollection = new ArrayList<Atelier>();
 
 	public void ajouterEleve(Eleve eleve) {
-		this.eleveCollection[this.eleveCollection.length] = eleve;
+		// this.eleveCollection[this.eleveCollection.length] = eleve;
+		this.eleveCollection.add(eleve);
 	}
 
 	public void ajouterAtelier(Atelier atelier) {
@@ -40,7 +43,8 @@ public class AtelierServiceImpl implements AtelierService {
 	}
 
 	// TODO Iterable
-	public Eleve[] getLstEleves() {
+	// public Eleve[] getLstEleves() {
+	public List<Eleve> getLstEleves() {
 		return this.eleveCollection;
 	}
 

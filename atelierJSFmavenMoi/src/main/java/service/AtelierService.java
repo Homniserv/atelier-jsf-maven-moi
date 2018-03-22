@@ -14,7 +14,7 @@ public interface AtelierService {
 
 	public void ajouterAtelier(Atelier atelier);
 
-	public Eleve[]  getLstEleves();
+	public List<Eleve>  getLstEleves();
 
 	public List<Atelier> getLstAteliers();
 

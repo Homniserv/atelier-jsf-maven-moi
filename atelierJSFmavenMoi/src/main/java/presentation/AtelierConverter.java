@@ -15,6 +15,7 @@ public class AtelierConverter implements Converter {
 	public AtelierConverter() {
 	}
 
+	@Override
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
 		if (value == null) {
 			return null;
@@ -31,6 +32,7 @@ public class AtelierConverter implements Converter {
 	}
 
 	/**2 ways if*/
+	@Override
 	public String getAsString(FacesContext arg0, UIComponent arg1, Object value) {
 		return (value instanceof Atelier) ? ((Atelier) value).getNom() : null;
 	}
